@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Untitled-04.css" type="text/css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="buttons">
+        <button type="button" class="btn btn-light" id="lightbtn" onclick="light()">Light</button>
+        <button type="button" class="btn btn-dark" id="darkbtn" onclick="dark()">Dark</button>
+    </div>
+    <h1 id="p1">Hello! ,Welcome to the Imageland Project</h1>
+    <h2>Apply Filters </h2>
+    <div class="container">
+        <!-- Content here -->
+        <p>Welocme to the apply filters section.<br>
+            Here we are gonna apply some cool filters on our image to make them look more awesome!.<br>
+            Please click on the
+            button choose file to select your image </p>
+    </div>
+    <p>
+        <canvas id="can4" class="border border-primary">
+        </canvas>
+        <Canvas id="can5" class="border border-primary">
+        </Canvas>
+    <p>
+        <input type="file" multiple="false" id="finput3" accept="image/*" class="btn btn-warning" onchange="upload3()">
+    </p>
+    <p>
+        <span><input type="button" value="Gray filter" class="btn btn-danger" onclick="grayscale()"></span>
+        <span><input type="button" value="Red filter" class="btn btn-danger" onclick="redscale()"></span>
+        <span><input type="button" value="Green filter" class="btn btn-danger" onclick="greenscale()"></span>
+        <span><input type="button" value="Blue filter" class="btn btn-danger" onclick="bluescale()"></span>
+        <span><input type="button" value="Pink filter" class="btn btn-danger" onclick="pinkscale()"></span>
+        <span><input type="button" value="Yellow filter" class="btn btn-danger" onclick="yellowscale()"></span>
+        <span><input type="button" value="Cyan filter" class="btn btn-danger" onclick="cyanscale()"></span>
+        <span><input type="button" value="Orange filter" class="btn btn-danger" onclick="orangescale()"></span>
+        <span><input type="button" value="Indigo filter" class="btn btn-danger" onclick="indigoscale()"></span>
+        <span><input type="button" value="Violet filter" class="btn btn-danger" onclick="violetscale()"></span>
+
+    </p>
+    </p>
+    <hr>
+
+    <h2>Change Background </h2>
+    <div class="container">
+        <!-- Content here -->
+        <p>Welocme to the Change Background section.<br>
+            This filter is used to change the background of the image using the green screen algorithm.<br>
+            To apply this filter the foreground image must have all the background in green color, so that all this
+            green color backgrond is replaced by the given background image.
+            <br>Please select the foreground and background images to apply this filter
+        </p>
+    </div>
+    <span>
+        <canvas id="can" class="border border-primary"></canvas>
+    </span>
+    <span>
+        <canvas id="can2" class="border border-primary"></canvas>
+    </span>
+    <canvas id="can3" class="border border-primary">
+    </canvas>
+    <p>Foreground Image: <input type="file" multiple="false" id="finput" accept="image/*" class="btn btn-warning"
+            onchange="upload()"></p>
+    <p>Background Image: <input type="file" multiple="false" id="finput2" accept="image/*" class="btn btn-warning"
+            onchange="upload2()"></p>
+
+    <input type="button" value="merge images" class="btn btn-warning" onclick="gsa()">
+    <button onclick="downloadCanvas()">Download Image</button>
+
+
+    </p>
+    </p>
+
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
+    <script src="Untitled-05.js"></script>
+</body>
+
+</html>
